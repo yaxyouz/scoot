@@ -1,0 +1,14 @@
+.get-link {
+    display: inline-block;
+    background-color: #FCB72B;
+    padding: 11px 40px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 3px solid #FCB72B;
+    transition: 100ms ease all;
+
+    &:hover {
+        background-color: transparent;
+        color: #FCB72B;
+    }
+}
