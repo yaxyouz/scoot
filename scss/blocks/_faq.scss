@@ -50,15 +50,27 @@
     padding: 0;
     padding: 32px 40px;
     color:  $accent-color;
-    background: url("../img/button.svg") no-repeat  calc(100% - 40px) center;
     transition: .2s ease all;
+    position: relative;
 
     &:hover {
         background-color: #FFF4DF;
     }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url("../img/button.svg") no-repeat center;
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
-.faq__close {
-    background: url("../img/buttunclose.svg") no-repeat calc(100% - 40px) center;
+.faq__close::after {
+    transform: rotate(180deg) translateY(50%);
 }
 .faq__item-descreption {
     display: none;
@@ -89,10 +101,13 @@
     }
     .faq__btn {
         padding: 32px 32px 32px 40px;
-        background: url("../img/button.svg") no-repeat  calc(100% - 32px) center;
+
+        &::after {
+            right: 32px;
+        }
     }
-    .faq__close {
-        background: url("../img/buttunclose.svg") no-repeat calc(100% - 32px) center;
+    .faq__close::after {
+        transform: rotate(180deg) translateY(50%);
     }
     .faq__item-descreption {
         padding: 24px 32px 32px 40px;
@@ -128,10 +143,13 @@
         font-size: 18px;
         line-height: 24px;
         letter-spacing: -0.803571px;
-        background: url("../img/button.svg") no-repeat  calc(100% - 28px) center;
+
+        &::after {
+            right: 28px;
+        }
     }
-    .faq__close {
-        background: url("../img/buttunclose.svg") no-repeat calc(100% - 28px) center;
+    .faq__close::after {
+        transform: rotate(180deg) translateY(50%);
     }
     .faq__item-descreption {
         padding: 5px 28px 32px 32px;

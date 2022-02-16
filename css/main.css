@@ -1785,17 +1785,31 @@ a {
   padding: 0;
   padding: 32px 40px;
   color: #495567;
-  background: url("../img/button.svg") no-repeat calc(100% - 40px) center;
   -webkit-transition: .2s ease all;
   transition: .2s ease all;
+  position: relative;
 }
 
 .faq__btn:hover {
   background-color: #FFF4DF;
 }
 
-.faq__close {
-  background: url("../img/buttunclose.svg") no-repeat calc(100% - 40px) center;
+.faq__btn::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/button.svg") no-repeat center;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.faq__close::after {
+  -webkit-transform: rotate(180deg) translateY(50%);
+          transform: rotate(180deg) translateY(50%);
 }
 
 .faq__item-descreption {
@@ -1831,10 +1845,13 @@ a {
   }
   .faq__btn {
     padding: 32px 32px 32px 40px;
-    background: url("../img/button.svg") no-repeat calc(100% - 32px) center;
   }
-  .faq__close {
-    background: url("../img/buttunclose.svg") no-repeat calc(100% - 32px) center;
+  .faq__btn::after {
+    right: 32px;
+  }
+  .faq__close::after {
+    -webkit-transform: rotate(180deg) translateY(50%);
+            transform: rotate(180deg) translateY(50%);
   }
   .faq__item-descreption {
     padding: 24px 32px 32px 40px;
@@ -1869,10 +1886,13 @@ a {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.803571px;
-    background: url("../img/button.svg") no-repeat calc(100% - 28px) center;
   }
-  .faq__close {
-    background: url("../img/buttunclose.svg") no-repeat calc(100% - 28px) center;
+  .faq__btn::after {
+    right: 28px;
+  }
+  .faq__close::after {
+    -webkit-transform: rotate(180deg) translateY(50%);
+            transform: rotate(180deg) translateY(50%);
   }
   .faq__item-descreption {
     padding: 5px 28px 32px 32px;
@@ -2157,7 +2177,7 @@ a {
 
 @media screen and (max-width: 719px) {
   .message__container {
-    padding-top: 200px;
+    padding-top: 260px;
     padding-bottom: 72px;
   }
   .message__item {

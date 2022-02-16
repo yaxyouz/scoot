@@ -64,11 +64,11 @@
     transform: translateY(-50%);
 }
 .header__burger--opened::after {
-    transform: rotate(45deg)
+    transform: rotate(45deg);
 }
 .header__burger--opened::before {
     margin-bottom: 0;
-    transform: rotate(-45deg)
+    transform: rotate(-45deg);
 }
 .header__nav {
     @include flex;
