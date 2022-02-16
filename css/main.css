@@ -2032,8 +2032,7 @@ a {
 @media screen and (max-width: 719px) {
   .map__wrapper {
     height: 152px;
-    position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     background: url("../img/map-mobile.png") no-repeat center;
     background-size: contain;
   }
@@ -2061,6 +2060,17 @@ a {
   .map__link {
     width: 100%;
     background-color: rgba(252, 183, 43, 0.15);
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    padding: 20px 0;
+    border: 3px solid rgba(252, 183, 43, 0.15);
+    -webkit-transition: 100ms ease all;
+    transition: 100ms ease all;
+  }
+  .map__link:hover {
+    background-color: #fff;
+    border: 3px solid rgba(252, 183, 43, 0.15);
   }
   .map__link::before {
     display: none;
@@ -2068,18 +2078,22 @@ a {
   .map__item--newyork {
     position: -webkit-sticky;
     position: sticky;
+    top: -10px;
   }
   .map__item--london {
     position: -webkit-sticky;
     position: sticky;
+    top: -10px;
   }
   .map__item--jakarta {
     position: -webkit-sticky;
     position: sticky;
+    top: -10px;
   }
   .map__item--yakohama {
     position: -webkit-sticky;
     position: sticky;
+    top: -10px;
   }
 }
 
@@ -2140,7 +2154,7 @@ a {
 
 @media screen and (max-width: 719px) {
   .message__container {
-    padding-top: 160px;
+    padding-top: 200px;
     padding-bottom: 72px;
   }
   .message__item {

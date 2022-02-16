@@ -102,8 +102,8 @@ only screen and (                min-resolution: 2dppx) {
 @media screen and (max-width: $mobile) {
     .map__wrapper{
         height: 152px;
-        position: relative;
-        margin-bottom: 100px;
+        // position: relative;
+        margin-bottom: 200px;
         background: url("../img/map-mobile.png") no-repeat center;
         background-size: contain;
     }
@@ -135,6 +135,17 @@ only screen and (                min-resolution: 2dppx) {
     .map__link {
         width: 100%;
         background-color: rgba(252, 183, 43, 0.15);
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -1.07143px;
+        padding: 20px 0;
+        border: 3px solid rgba(252, 183, 43, 0.15);
+        transition: 100ms ease all;
+
+        &:hover {
+            background-color: #fff;
+            border: 3px solid rgba(252, 183, 43, 0.15);
+        }
 
         &::before {
             display: none;
@@ -142,14 +153,18 @@ only screen and (                min-resolution: 2dppx) {
     }
     .map__item--newyork {
         position: sticky;
+        top: -10px;
     }
     .map__item--london {
         position: sticky;
+        top: -10px;
     }
     .map__item--jakarta {
         position: sticky;
+        top: -10px;
     }
     .map__item--yakohama {
         position: sticky;
+        top: -10px;
     }
 }
