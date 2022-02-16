@@ -1,0 +1,155 @@
+.map__container {
+    position: relative;
+}
+.map__wrapper{
+    display: block;
+    height: 543px;
+    background: url("../img/map.png") no-repeat center;
+    background-size: contain;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi), 
+only screen and (                min-resolution: 2dppx) { 
+    
+    .map__wrapper {
+        background: url("../img/map@2x.png") no-repeat center;
+        background-size: contain;
+    }
+}
+.map__list {
+    @include reset-list;
+}
+.map__item--newyork {
+    position: absolute;
+    top: 70px;
+    left: 175px;
+}
+.map__item--london {
+    position: absolute;
+    top: 12px;
+    left: 430px; 
+}
+.map__item--jakarta {
+    position: absolute;
+    top: 245px;
+    right: 180px; 
+}
+.map__item--yakohama {
+    position: absolute;
+    top: 76px;
+    right: 98px; 
+}
+.map__link {
+    display: inline-block;
+    padding: 22px 40px;
+    background-color: $yellow;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -1.07143px;
+    color: $accent-color;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        background-color: $yellow;
+        transform: translate(-50%, -50%) rotate(45deg);
+        z-index: 0;
+    }
+}
+@media screen and (max-width: $tablet) { 
+    .map__wrapper {
+        height: 337px;
+    }
+    .map__item--newyork {
+        top: 45px;
+        left: 120px;
+    }
+    .map__item--london {
+        top: 20px;
+        left: 263px; 
+    }
+    .map__item--jakarta {
+        top: 162px;
+        right: 115px; 
+    }
+    .map__item--yakohama {
+        top: 60px;
+        right: 60px; 
+    }
+    .map__link {
+        padding: 3px 37px;
+        font-size: 13px;
+        line-height: 28px;
+        letter-spacing: -0.580357px;
+    
+        &::before {
+            width: 16px;
+            height: 16px;
+        } 
+    }
+}
+@media screen and (max-width: $mobile) {
+    .map__wrapper{
+        height: 152px;
+        position: relative;
+        margin-bottom: 100px;
+        background: url("../img/map-mobile.png") no-repeat center;
+        background-size: contain;
+    }
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2), 
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi), 
+    only screen and (                min-resolution: 2dppx) { 
+        
+        .map__wrapper {
+            background: url("../img/map-mobile@2x.png") no-repeat center;
+            background-size: contain;
+        }
+    }
+    .map__list {
+        width: 100%;
+        position: absolute;
+        top: 170px;
+    }
+    .map__item {
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .map__link {
+        width: 100%;
+        background-color: rgba(252, 183, 43, 0.15);
+
+        &::before {
+            display: none;
+        }
+    }
+    .map__item--newyork {
+        position: sticky;
+    }
+    .map__item--london {
+        position: sticky;
+    }
+    .map__item--jakarta {
+        position: sticky;
+    }
+    .map__item--yakohama {
+        position: sticky;
+    }
+}

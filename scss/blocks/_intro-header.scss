@@ -1,0 +1,52 @@
+.intro-header__wrapper {
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+.intro-header__title {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+    color: #fff;
+    margin: 0;
+    padding: 72px 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 234px;
+        height: 63px;
+        background: url("../img/circles.svg") no-repeat center;
+        position: absolute;
+        right: -155px;
+        top: 68px;
+    }
+}
+@media screen and (max-width: $tablet) { 
+    .intro-header__wrapper {
+        margin-bottom: 144px;
+    }
+    .intro-header__title {
+        padding-left: 60px;
+
+        &::after {
+            right: -60px;
+        }
+    }
+}
+@media screen and (max-width: $mobile) {
+    .intro-header__wrapper {
+        margin-bottom: 72px;
+    }
+    .intro-header__title {
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: -1.78571px;
+        padding-left: 0;
+    
+        &::after {
+            display: none;
+        }
+    }
+}
