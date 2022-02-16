@@ -124,6 +124,8 @@ only screen and (                min-resolution: 2dppx) {
         width: 100%;
         position: absolute;
         top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .map__item {
         margin-bottom: 16px;
